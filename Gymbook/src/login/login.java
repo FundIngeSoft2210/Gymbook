@@ -78,7 +78,7 @@ public class login {
         this.lista_De_Usuarios.remove(username);
     }
     
-    boolean existe_el_usuario(String username,String contrasena){
+    public boolean existe_el_usuario(String username,String contrasena){
         Usuario usuarioARevisar = new Usuario(username,contrasena);
         if (this.lista_De_Usuarios.containsKey(username) || this.lista_De_Usuarios.containsValue(usuarioARevisar)){
             return true;
@@ -86,7 +86,7 @@ public class login {
         return false;
     }
     
-    boolean ContrasenaCorrecta(String username,String contrasena){
+    public boolean ContrasenaCorrecta(String username,String contrasena){
         if (existe_el_usuario(username,contrasena))
                 if (contrasena == this.lista_De_Usuarios.get(username).getContrasena())
                     return true;
@@ -94,13 +94,13 @@ public class login {
         return false;
     }
     
-    void guardarTodo() throws FileNotFoundException,IOException {
+    public void guardarTodo() throws FileNotFoundException,IOException {
         this.guardar();
         this.guardarEntrenadores();
         this.guardarClientes();
         this.guardarGimnasios();
     }
-    void cargarTodo() throws FileNotFoundException,IOException, ClassNotFoundException {
+    public void cargarTodo() throws FileNotFoundException,IOException, ClassNotFoundException {
         this.cargar();
         this.cargarEntrenadores();
         this.cargarClientes();
