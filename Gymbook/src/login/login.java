@@ -13,9 +13,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.swing.Icon;
 import login.Clases.Entrenadores;
 import login.Clases.Gymnasio;
 import login.Clases.Usuario;
@@ -42,7 +44,11 @@ public class login {
     public void insertarUsuario(String username,String contrasena){
         Usuario nuevoUsuario = new Usuario(username,contrasena);
         this.lista_De_Usuarios.put(this.lista_De_Usuarios.size()+1,nuevoUsuario);
-    }    
+    }
+    public void insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono, Date fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen){
+        cliente nuevoCliente = new cliente(gimnasio,nombre,apellido, numero_Telefono, fechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, nombre_Contacto_emergencia, numero_telefono_emergencia, username, contrasena,imagen);
+        this.lista_de_clientes.add(nuevoCliente);
+    }
     
     boolean existe_el_usuario(String username,String contrasena){
         Usuario usuarioARevisar = new Usuario(username,contrasena);
