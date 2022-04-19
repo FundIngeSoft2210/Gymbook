@@ -5,6 +5,8 @@
  */
 package login.Clases;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author julio
@@ -12,6 +14,21 @@ package login.Clases;
 public class Usuario {
     private String username;
     private String contrasena;
+    private Icon imagen;
+
+    public Icon getImagen() {
+        return imagen;
+    }
+
+    public Usuario(String username, String contrasena, Icon imagen) {
+        this.username = username;
+        this.contrasena = contrasena;
+        this.imagen = imagen;
+    }
+
+    public void setImagen(Icon imagen) {
+        this.imagen = imagen;
+    }
 
     public String getUsername() {
         return username;
