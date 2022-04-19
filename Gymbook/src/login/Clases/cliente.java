@@ -15,5 +15,4 @@ public class cliente extends Usuario{
         super(username, contrasena);
     }
     private String gimnasio;
-    
 }
