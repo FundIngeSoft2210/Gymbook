@@ -7,6 +7,7 @@ package login.Clases;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.Icon;
 
 /**
  *
@@ -16,6 +17,12 @@ public class Gymnasio extends login.Clases.Usuario{
 
     public Gymnasio(String username, String contrasena) {
         super(username, contrasena);
+    }
+
+    public Gymnasio(String Nombre_del_Gimnasio, String Direccion, String username, String contrasena, Icon imagen) {
+        super(username, contrasena, imagen);
+        this.Nombre_del_Gimnasio = Nombre_del_Gimnasio;
+        this.Direccion = Direccion;
     }
     
     public Gymnasio(String username,String contrasena,String nombre,String direccion){
