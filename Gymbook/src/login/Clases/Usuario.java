@@ -15,16 +15,17 @@ public class Usuario {
     private String username;
     private String contrasena;
     private Icon imagen;
-
-    public Icon getImagen() {
-        return imagen;
-    }
-
     public Usuario(String username, String contrasena, Icon imagen) {
         this.username = username;
         this.contrasena = contrasena;
         this.imagen = imagen;
     }
+
+    public Icon getImagen() {
+        return imagen;
+    }
+
+    
 
     public void setImagen(Icon imagen) {
         this.imagen = imagen;
