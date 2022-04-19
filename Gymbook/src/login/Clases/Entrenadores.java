@@ -7,6 +7,7 @@ package login.Clases;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.Icon;
 
 
 /**
@@ -17,6 +18,12 @@ public class Entrenadores extends Usuario{
     
     public Entrenadores(String username, String contrasena) {
         super(username, contrasena);
+    }
+
+    public Entrenadores(String nombre, String descripcion, String username, String contrasena, Icon imagen) {
+        super(username, contrasena, imagen);
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
     
     public Entrenadores(String username, String contrasena,String nombre,String descripcion) {
