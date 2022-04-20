@@ -19,8 +19,18 @@ public class ControladorLogin {
     public ControladorLogin() {
     }
     
-    public void registrarUsuario(String nombre,String apellido, long NumeroDocumento,long NumeroTelefonico, Date FechaNacimiento, String direccion, String ocupacion, String EPS,String genero, Double peso,Double altura, String NombreContactoEmergencia,long TelefonoContactoEmergencia, String username,String contrasena){
-        
+    public int registrarUsuario(String TipodeUsuario,String nombre,String apellido, long NumeroDocumento,long NumeroTelefonico, String FechaNacimiento, String direccion, String ocupacion, String EPS,String genero, Double peso,Double altura, String NombreContactoEmergencia,long TelefonoContactoEmergencia, String username,String contrasena,int edad, String gimnasio){
+        if (login.existe_el_usuario(username, contrasena)) return 0;
+        login.insertarUsuario(username, contrasena);
+        if(TipodeUsuario=="Cliente"){
+            login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena, null);
+        }
+        else if(TipodeUsuario=="Entrenador"){
+            login.insertarEntrenador(nombre, direccion, username, contrasena, null);
+        }else{
+            login.insertarGimnasio(gimnasio, direccion, username, contrasena, null);
+        }
+        return 2;
     }
     public boolean verificar_User_contrasena(String username,String contrasena){
         return login.ContrasenaCorrecta(username,contrasena);
