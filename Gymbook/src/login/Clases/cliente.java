@@ -21,7 +21,7 @@ public class cliente extends Usuario{
     private String nombre;
     private String apellido;
     private long numero_Telefono;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private int edad;
     private String direccion;
     private String ocupacion;
@@ -31,7 +31,7 @@ public class cliente extends Usuario{
     private String nombre_Contacto_emergencia;
     private long numero_telefono_emergencia;
 
-    public cliente(String gimnasio, String nombre, String apellido, long numero_Telefono, Date fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen) {
+    public cliente(String gimnasio, String nombre, String apellido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen) {
         super(username, contrasena, imagen);
         this.gimnasio = gimnasio;
         this.nombre = nombre;
@@ -48,7 +48,7 @@ public class cliente extends Usuario{
         this.numero_telefono_emergencia = numero_telefono_emergencia;
     }
 
-    public cliente(String gimnasio, String nombre, String apelllido, long numero_Telefono, Date fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena) {
+    public cliente(String gimnasio, String nombre, String apelllido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena) {
         super(username, contrasena);
         this.gimnasio = gimnasio;
         this.nombre = nombre;
@@ -97,11 +97,11 @@ public class cliente extends Usuario{
         this.numero_Telefono = numero_Telefono;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
