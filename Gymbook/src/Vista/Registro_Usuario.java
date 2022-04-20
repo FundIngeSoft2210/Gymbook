@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_01.Vista;
+package Vista;
+
+import Controladores.ControladorLogin;
+import java.util.Date;
 
 /**
  *
@@ -125,6 +128,11 @@ public class Registro_Usuario extends javax.swing.JFrame {
         jTextField14.setText("Contraseña");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuario", "Entrenador", "Gimnacio" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Tipo de usuario:");
 
@@ -275,11 +283,32 @@ public class Registro_Usuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        ControladorLogin login=new ControladorLogin();
+        int tipoUsuario;
+        String tipo;
+        tipoUsuario = jComboBox2.getSelectedIndex();
+        if (tipoUsuario==1){
+            tipo = "Cliente";
+        }else if(tipoUsuario==2){
+            tipo = "Gimnasio";
+        }else{
+            tipo = "Entrenador";
+        }
+       //String TipodeUsuario,String nombre,String apellido, long NumeroDocumento,long NumeroTelefonico, String FechaNacimiento, String direccion, String ocupacion, String EPS,String genero, Double peso,Double altura, String NombreContactoEmergencia,long TelefonoContactoEmergencia, String username,String contrasena,int edad, String gimnasio
+        int x;
+        x = login.registrarUsuario(tipo,jTextField1.getText(), jTextField2.getText() ,Long.parseLong(jTextField3.getText()) ,Long.parseLong(jTextField4.getText()),jTextField5.getText() , jTextField6.getText(), jTextField8.getText(),jTextField9.getText(), jComboBox1.getSelectedItem().toString(),Double.parseDouble(jTextField10.getText()), Double.parseDouble(jTextField11.getText()), jTextField7.getText(), Long.parseLong(jTextField12.getText()),jTextField13.getText() , jTextField14.getText(), 10, null);
+        if (x==0){
+            
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField13ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
