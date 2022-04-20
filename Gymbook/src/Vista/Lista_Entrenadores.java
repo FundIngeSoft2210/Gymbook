@@ -37,8 +37,8 @@ public class Lista_Entrenadores extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
+                {"Camilo Lopez", "Cardio/ Fuerza", "2 meses", "Power Boys"},
+                {"Maria Sotelo", "Yoga / Estiramiento", "5 meses", "Mente Sana"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -110,6 +110,10 @@ public class Lista_Entrenadores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    Menu_Usuario MU= new Menu_Usuario();
+    MU.setVisible(true);
+    this.dispose(); 
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

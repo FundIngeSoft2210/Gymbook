@@ -73,13 +73,13 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Nombre de Usuario");
+        jLabel1.setText("Andrea Vanegas");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Diciplina", null},
-                {"Cardio", null},
-                {"Fuerza / Brazo", null},
+                {"Diciplina", "50"},
+                {"Cardio", "70"},
+                {"Fuerza / Brazo", "25"},
                 {"Fuerza / Pecho", null},
                 {"Fuerza / Espalda", null},
                 {"Fuerza / Pierna", null},
@@ -112,7 +112,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
 
         jLabel3.setText("Desarrollo Personal");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Perfil Usuario.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Perfil Usuario.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
 
         jButton1.setText("Buscar");
@@ -125,7 +125,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Correr.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr.jpg"))); // NOI18N
 
         jLabel7.setText("Carrera 10 KM");
 
@@ -172,7 +172,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -181,7 +181,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton3))))
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Flexiones pecho.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Flexiones pecho.jpg"))); // NOI18N
 
         jLabel11.setText("Flexiones pecho 50 en 1:30 minutos");
 
@@ -217,9 +217,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                                         .addComponent(jButton4)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel15)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel15)
                                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(44, 44, 44)))))
                 .addContainerGap())
@@ -231,7 +229,6 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,7 +270,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Adelgazar.jpg"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Adelgazar.jpg"))); // NOI18N
 
         jLabel18.setText("Adelgazar 3 kilos en marzo");
 
@@ -310,7 +307,6 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -322,7 +318,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton5))))
         );
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Correr 02.jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr.jpg"))); // NOI18N
 
         jLabel22.setText("Carrera 5 KM");
 
@@ -331,7 +327,11 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
         jLabel24.setText("PTS 50");
 
         jButton6.setText("Ver");
-        jButton6.setActionCommand("Ver");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -396,6 +396,11 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
         );
 
         jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Metas disponible");
@@ -410,7 +415,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(140, 140, 140)
+                .addGap(156, 156, 156)
                 .addComponent(jLabel3)
                 .addGap(112, 112, 112))
             .addGroup(layout.createSequentialGroup()
@@ -434,7 +439,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -464,7 +469,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jLabel1)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 30, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -485,7 +490,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                         .addComponent(jButton2)
                         .addGap(25, 25, 25))))
         );
@@ -500,6 +505,22 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    Explicacion_Meta EM= new Explicacion_Meta();
+    EM.setVisible(true);
+    this.dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    Menu_Usuario MU= new Menu_Usuario();
+    MU.setVisible(true);
+    this.dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

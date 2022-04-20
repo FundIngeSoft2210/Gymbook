@@ -53,7 +53,7 @@
                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -200,39 +200,39 @@
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="5">
                 <Column editable="true" title="Meta" type="java.lang.Object">
-                  <Data value="Carrera 5 Km"/>
-                  <Data value="Bajar 2 cm talla"/>
-                  <Data value="Carrera 2 km"/>
-                  <Data value="Entrenamiento Tabata"/>
-                  <Data value="Fallo a Clase"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
                 </Column>
                 <Column editable="true" title="Fecha" type="java.lang.Object">
-                  <Data value="15/02/2022"/>
-                  <Data value="14/02/2022"/>
-                  <Data value="12/02/2022"/>
-                  <Data value="10/02/2022"/>
-                  <Data value="8/02/2022"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
                 </Column>
                 <Column editable="true" title="Area" type="java.lang.Object">
-                  <Data value="Cardio"/>
-                  <Data value="Disciplina"/>
-                  <Data value="Cardio"/>
-                  <Data value="Fuerza/Brazo"/>
-                  <Data value="Cardio"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
                 </Column>
                 <Column editable="true" title="Puntos" type="java.lang.Object">
-                  <Data value="50"/>
-                  <Data value="50"/>
-                  <Data value="30"/>
-                  <Data value="25"/>
-                  <Data value="-10"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
                 </Column>
                 <Column editable="true" title="Estado" type="java.lang.Object">
-                  <Data value="Proceso"/>
-                  <Data value="Realizado"/>
-                  <Data value="Realizado"/>
-                  <Data value="Realizado"/>
-                  <Data value="Realizado"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value=""/>
                 </Column>
               </Table>
             </Property>
@@ -392,7 +392,7 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto_01/Vista/Sara.jpg"/>
+                  <Image iconType="3" name="/proyecto_01/Vista/Imagenes/Sara.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -480,7 +480,7 @@
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto_01/Vista/Manuel.jpg"/>
+                  <Image iconType="3" name="/proyecto_01/Vista/Imagenes/Manuel.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -598,7 +598,7 @@
             <Component class="javax.swing.JLabel" name="jLabel17">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto_01/Vista/Asistencia Grupal.jpg"/>
+                  <Image iconType="3" name="/proyecto_01/Vista/Imagenes/Asistencia Grupal.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -678,7 +678,7 @@
             <Component class="javax.swing.JLabel" name="jLabel21">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto_01/Vista/Carrera Equipo.jpg"/>
+                  <Image iconType="3" name="/proyecto_01/Vista/Imagenes/Correr 02.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -710,6 +710,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Regresar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>

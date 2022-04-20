@@ -93,11 +93,11 @@ public class Equipo_Usuario extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Carrera 5 Km", "15/02/2022", "Cardio", "50", "Proceso"},
-                {"Bajar 2 cm talla", "14/02/2022", "Disciplina", "50", "Realizado"},
-                {"Carrera 2 km", "12/02/2022", "Cardio", "30", "Realizado"},
-                {"Entrenamiento Tabata", "10/02/2022", "Fuerza/Brazo", "25", "Realizado"},
-                {"Fallo a Clase", "8/02/2022", "Cardio", "-10", "Realizado"}
+                {"", "", "", "", ""},
+                {"", "", "", "", ""},
+                {"", "", "", "", ""},
+                {"", "", "", "", ""},
+                {"", "", "", "", ""}
             },
             new String [] {
                 "Meta", "Fecha", "Area", "Puntos", "Estado"
@@ -121,7 +121,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Sara.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Sara.jpg"))); // NOI18N
 
         jLabel7.setText("Sara");
 
@@ -175,7 +175,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton3))))
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Manuel.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Manuel.jpg"))); // NOI18N
 
         jLabel11.setText("Manuel");
 
@@ -252,7 +252,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Asistencia Grupal.jpg"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Asistencia Grupal.jpg"))); // NOI18N
 
         jLabel18.setText("Asistencia Completa Equipo");
 
@@ -300,7 +300,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton5))))
         );
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Carrera Equipo.jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr 02.jpg"))); // NOI18N
 
         jLabel22.setText("Carrera en equipo 5 KM");
 
@@ -376,6 +376,11 @@ public class Equipo_Usuario extends javax.swing.JFrame {
         );
 
         jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Integrantes Equipo");
@@ -410,7 +415,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(105, 105, 105)
                                 .addComponent(jLabel16)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jButton1)
@@ -478,6 +483,13 @@ public class Equipo_Usuario extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    Menu_Usuario MU= new Menu_Usuario();
+    MU.setVisible(true);
+    this.dispose();   
+    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
