@@ -2,10 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista;
-
-import Controladores.ControladorLogin;
-import login.login;
+package proyecto_01.Vista;
 
 /**
  *
@@ -47,11 +44,6 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Login");
 
         jTextField1.setText("Usuario o Correo");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -60,11 +52,6 @@ public class Login extends javax.swing.JFrame {
         jButton2.setText("Registrarse");
 
         jButton3.setText("Ingresar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,19 +104,6 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        ControladorLogin login = new ControladorLogin();
-        if (!login.verificar_User_contrasena(jTextField1.getText(), jPasswordField1.getPassword().toString())) {
-            jTextField1.setText("Contrasena o Usuario incorrectos");
-            jPasswordField1.setText(" ");
-        }         
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
