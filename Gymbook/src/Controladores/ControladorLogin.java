@@ -23,7 +23,7 @@ public class ControladorLogin {
         if (login.existe_el_usuario(username, contrasena)) return 0;
         login.insertarUsuario(username, contrasena);
         if(TipodeUsuario=="Cliente"){
-            login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena, null);
+            login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena);
         }
         else if(TipodeUsuario=="Entrenador"){
             login.insertarEntrenador(nombre, direccion, username, contrasena, null);
