@@ -51,7 +51,7 @@ public class login {
             return "Usuario ya existente";
         }
     }
-    public String insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono, Date fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen){
+    public String insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen){
         cliente nuevoCliente = new cliente(gimnasio,nombre,apellido, numero_Telefono, fechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, nombre_Contacto_emergencia, numero_telefono_emergencia, username, contrasena,imagen);
         if (!this.existe_el_usuario(username, contrasena)){
             this.lista_de_clientes.add(nuevoCliente);
