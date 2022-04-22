@@ -4,6 +4,8 @@
  */
 package proyecto_01.Vista;
 
+import Controladores.ControladorLogin;
+
 /**
  *
  * @author MAIKOL
@@ -133,10 +135,19 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    Menu_Usuario MU= new Menu_Usuario();
-    MU.setVisible(true);
-    this.dispose();  
-
+     
+    
+    ControladorLogin Login = new ControladorLogin();
+    if(Login.verificar_User_contrasena(jTextField1.getText(), jPasswordField1.getPassword().toString())){
+        Menu_Usuario MU= new Menu_Usuario();
+        MU.setVisible(true);
+        this.dispose(); 
+    }else{
+        Error_Login_02 MU= new Error_Login_02();
+        MU.setVisible(true);
+        this.dispose(); 
+    }
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
