@@ -30,9 +30,16 @@ public class ControladorLogin {
         }else{
             login.insertarGimnasio(gimnasio, direccion, username, contrasena, null);
         }
-        return 2;
+        return 1;
     }
     public boolean verificar_User_contrasena(String username,String contrasena){
         return login.ContrasenaCorrecta(username,contrasena);
     };
+    public boolean existe_el_Usuario(String name,String contrasena){
+        if(login.existe_el_usuario(name, contrasena)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
