@@ -131,6 +131,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Registro_Usuario MU= new Registro_Usuario();
+        MU.setVisible(true);
+        this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -138,6 +141,11 @@ public class Login extends javax.swing.JFrame {
      
     
     ControladorLogin Login = new ControladorLogin();
+    if (Login.existe_el_Usuario(jTextField1.getText(), jPasswordField1.getPassword().toString())){
+        Error_Login MU= new Error_Login();
+        MU.setVisible(true);
+        this.dispose();
+    }
     if(Login.verificar_User_contrasena(jTextField1.getText(), jPasswordField1.getPassword().toString())){
         Menu_Usuario MU= new Menu_Usuario();
         MU.setVisible(true);
