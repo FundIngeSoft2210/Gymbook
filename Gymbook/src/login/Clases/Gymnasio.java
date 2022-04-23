@@ -25,8 +25,8 @@ public class Gymnasio extends login.Clases.Usuario{
         this.Direccion = Direccion;
     }
     
-    public Gymnasio(String username,String contrasena,String nombre,String direccion){
-        super(username,contrasena);
+    public Gymnasio(String tipo,String username,String contrasena,String nombre,String direccion){
+        super(username,contrasena,tipo);
         
         this.Nombre_del_Gimnasio=nombre;
         this.Direccion=direccion;
@@ -36,6 +36,10 @@ public class Gymnasio extends login.Clases.Usuario{
     private List<cliente> lista_Clientes = new ArrayList<>();   
     private String Nombre_del_Gimnasio;
     private String Direccion;
+
+    public Gymnasio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public List<Entrenadores> getLista_Entrenadores() {
         return lista_Entrenadores;
