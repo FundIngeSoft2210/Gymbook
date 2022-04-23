@@ -21,6 +21,7 @@ public class cliente extends Usuario{
     private String nombre;
     private String apellido;
     private long numero_Telefono;
+    private long numero_cedula;
     private String fechaNacimiento;
     private int edad;
     private String direccion;
@@ -48,12 +49,13 @@ public class cliente extends Usuario{
         this.numero_telefono_emergencia = numero_telefono_emergencia;
     }
 
-    public cliente(String gimnasio, String nombre, String apelllido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena) {
-        super(username, contrasena);
+    public cliente(String tipo,String gimnasio, String nombre, String apelllido, long numero_Telefono, long cedula, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena) {
+        super(username, contrasena,tipo);
         this.gimnasio = gimnasio;
         this.nombre = nombre;
         this.apellido = apelllido;
         this.numero_Telefono = numero_Telefono;
+        this.numero_cedula= cedula;
         this.fechaNacimiento = fechaNacimiento;
         this.edad = edad;
         this.direccion = direccion;
@@ -63,6 +65,26 @@ public class cliente extends Usuario{
         this.altura = altura;
         this.nombre_Contacto_emergencia = nombre_Contacto_emergencia;
         this.numero_telefono_emergencia = numero_telefono_emergencia;
+    }
+
+    public cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public long getNumero_cedula() {
+        return numero_cedula;
+    }
+
+    public void setNumero_cedula(long numero_cedula) {
+        this.numero_cedula = numero_cedula;
     }
 
     public String getGimnasio() {
