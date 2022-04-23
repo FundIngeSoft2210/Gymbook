@@ -6,7 +6,9 @@
 package Controladores;
 
 import java.util.Date;
+import login.Clases.Usuario;
 import login.login;
+import login.Clases.Usuario;
 
 /**
  *
@@ -15,6 +17,24 @@ import login.login;
 public class ControladorLogin {
     
     private login login = new login();
+    private Usuario actual = new Usuario();
+    private String user;
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public Usuario getActual() {
+        return actual;
+    }
+
+    public void setActual(Usuario actual) {
+        this.actual = actual;
+    }
 
     public ControladorLogin() {
     }
@@ -23,12 +43,12 @@ public class ControladorLogin {
         if (login.existe_el_usuario(username, contrasena)) return 0;
         login.insertarUsuario(username, contrasena);
         if(TipodeUsuario=="Cliente"){
-            login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena);
+            login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico,NumeroDocumento, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena);
         }
         else if(TipodeUsuario=="Entrenador"){
-            login.insertarEntrenador(nombre, direccion, username, contrasena, null);
+            login.insertarEntrenador(apellido,nombre, username, contrasena);
         }else{
-            login.insertarGimnasio(gimnasio, direccion, username, contrasena, null);
+            login.insertarGimnasio(gimnasio, direccion, username, contrasena);
         }
         return 1;
     }
@@ -41,5 +61,13 @@ public class ControladorLogin {
         }else{
             return false;
         }
+    }
+
+    public login getLogin() {
+        return login;
+    }
+
+    public void setLogin(login login) {
+        this.login = login;
     }
 }
