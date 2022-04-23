@@ -14,9 +14,28 @@ import javax.swing.Icon;
 public class Usuario {
     private String username;
     private String contrasena;
+    private String tipo;
+    
     public Usuario(String username, String contrasena, Icon imagen) {
         this.username = username;
         this.contrasena = contrasena;
+    }
+
+    public Usuario(String username, String contrasena, String tipo) {
+        this.username = username;
+        this.contrasena = contrasena;
+        this.tipo = tipo;
+    }
+    public Usuario(){
+        
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getUsername() {
