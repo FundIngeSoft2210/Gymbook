@@ -15,26 +15,39 @@ import javax.swing.Icon;
  * @author julio
  */
 public class Entrenadores extends Usuario{
+
+    public Entrenadores(String apellido,String nombre, String username, String contrasena) {
+        super(username, contrasena);
+        this.nombre = nombre;
+        this.apellido=apellido;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
     
     public Entrenadores(String username, String contrasena) {
         super(username, contrasena);
     }
 
-    public Entrenadores(String nombre, String descripcion, String username, String contrasena, Icon imagen) {
+    public Entrenadores(String tipo,String nombre, String descripcion, String username, String contrasena, Icon imagen) {
         super(username, contrasena, imagen);
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
     
-    public Entrenadores(String username, String contrasena,String nombre,String descripcion) {
-        super(username, contrasena);
-        this.nombre= nombre;
-        this.descripcion=descripcion;
-    }
-    
     private List<cliente> Entrenados = new ArrayList<>();
     private String nombre;
     private String descripcion; 
+    private String apellido;
+
+    public Entrenadores() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public List<cliente> getEntrenados() {
         return Entrenados;
