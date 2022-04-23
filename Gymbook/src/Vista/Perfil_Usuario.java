@@ -4,10 +4,18 @@
  */
 package proyecto_01.Vista;
 
+import Controladores.ControladorLogin;
+import java.util.List;
+import login.Clases.Entrenadores;
+import login.Clases.Gymnasio;
+import login.Clases.Usuario;
+import login.Clases.cliente;
+
 /**
  *
  * @author MAIKOL
  */
+
 public class Perfil_Usuario extends javax.swing.JFrame {
 
     /**
@@ -16,7 +24,50 @@ public class Perfil_Usuario extends javax.swing.JFrame {
     public Perfil_Usuario() {
         initComponents();
     }
+    
+    public String usernameActual;
+   
 
+    public String getUsernameActual() {
+        return usernameActual;
+    }
+
+    public void setUsernameActual(String usernameActual) {
+        this.usernameActual = usernameActual;
+    }
+    
+    public void llenarCampos(){
+        ControladorLogin login = new ControladorLogin();
+        
+        if(login.getLogin().getLista_De_Usuarios().get(usernameActual).getTipo()=="Cliente"){
+            cliente cliente = new cliente();
+            cliente = login.getLogin().buscarCliente(usernameActual);
+            jTextField1.setText(cliente.getNombre());
+            jTextField2.setText(cliente.getApellido());
+            jTextField14.setText(String.valueOf(cliente.getNumero_cedula()));
+            jTextField3.setText(String.valueOf(cliente.getNumero_Telefono()));
+            jTextField4.setText(cliente.getFechaNacimiento());
+            jTextField5.setText(String.valueOf(cliente.getEdad()));
+            jTextField6.setText(cliente.getDireccion());
+            jTextField7.setText(cliente.getOcupacion());
+            jTextField8.setText(cliente.getEPS());
+            jTextField9.setText(String.valueOf(cliente.getPeso()));
+            jTextField10.setText(String.valueOf(cliente.getAltura()));
+            jTextField11.setText(cliente.getNombre_Contacto_emergencia());
+            jTextField12.setText(String.valueOf(cliente.getNumero_telefono_emergencia()));
+        }else if(login.getLogin().getLista_De_Usuarios().get(usernameActual).getTipo()=="Entrenador"){
+            Entrenadores entrenador = new Entrenadores();
+            entrenador = login.getLogin().buscarEntrenador(usernameActual);
+            jTextField1.setText(entrenador.getNombre());
+            jTextField2.setText(entrenador.getApellido());
+        }else{
+            Gymnasio gym = new Gymnasio();
+            gym = login.getLogin().buscarGimnasio(usernameActual);
+            jTextField1.setText(gym.getNombre_del_Gimnasio());
+            jTextField6.setText(gym.getDireccion());
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -358,6 +409,7 @@ public class Perfil_Usuario extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -378,8 +430,11 @@ public class Perfil_Usuario extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            
             public void run() {
-                new Perfil_Usuario().setVisible(true);
+                Perfil_Usuario PE = new Perfil_Usuario();
+                PE.llenarCampos();
+                PE.setVisible(true);
             }
         });
     }
