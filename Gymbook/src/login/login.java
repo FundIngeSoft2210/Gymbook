@@ -126,7 +126,18 @@ public class login {
         this.lista_de_gimnasios.remove(this.lista_De_Usuarios.get(username));
         this.lista_De_Usuarios.remove(username);
     }
-    
+    public void BorrarUsuario(String username){
+        if (this.existe_el_usuario(username, username)){
+            if(this.getLista_De_Usuarios().get(username).getTipo()=="Cliente"){
+                this.getLista_de_clientes().remove(this.buscarCliente(username));
+            }else if(this.getLista_De_Usuarios().get(username).getTipo()=="Entrenador"){
+                this.getLista_de_entrenadores().remove(this.buscarEntrenador(username));
+            }else{
+                this.getLista_de_gimnasios().remove(this.buscarGimnasio(username));
+            }
+            this.getLista_De_Usuarios().remove(username);
+        }
+    }
     public boolean existe_el_usuario(String username,String contrasena){
         Usuario usuarioARevisar = new Usuario(username,contrasena);
         if (this.lista_De_Usuarios.containsKey(username) || this.lista_De_Usuarios.containsValue(usuarioARevisar)){
