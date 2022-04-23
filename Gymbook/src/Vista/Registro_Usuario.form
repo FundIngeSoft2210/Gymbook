@@ -119,10 +119,7 @@
                                           <Component id="jTextField8" min="-2" pref="277" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jTextField9" pref="275" max="32767" attributes="0"/>
-                                          <Component id="jTextField17" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="jTextField9" min="-2" pref="275" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
@@ -178,10 +175,7 @@
                   <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="jTextField16" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -383,17 +377,12 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField15">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre Gimancio"/>
+        <Property name="text" type="java.lang.String" value="Nombre Gimansio"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField16">
       <Properties>
         <Property name="text" type="java.lang.String" value="Edad"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField17">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre del gimnasio"/>
       </Properties>
     </Component>
   </SubComponents>
