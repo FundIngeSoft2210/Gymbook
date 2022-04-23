@@ -32,11 +32,60 @@ public class login {
     private List<cliente> lista_de_clientes= new ArrayList<>();
     private List<Entrenadores> lista_de_entrenadores = new ArrayList<>();
     private List<Gymnasio> lista_de_gimnasios = new ArrayList<>();
+
+    public List<cliente> getLista_de_clientes() {
+        return lista_de_clientes;
+    }
+
+    public void setLista_de_clientes(List<cliente> lista_de_clientes) {
+        this.lista_de_clientes = lista_de_clientes;
+    }
+
+    public List<Entrenadores> getLista_de_entrenadores() {
+        return lista_de_entrenadores;
+    }
+
+    public void setLista_de_entrenadores(List<Entrenadores> lista_de_entrenadores) {
+        this.lista_de_entrenadores = lista_de_entrenadores;
+    }
+
+    public List<Gymnasio> getLista_de_gimnasios() {
+        return lista_de_gimnasios;
+    }
+
+    public void setLista_de_gimnasios(List<Gymnasio> lista_de_gimnasios) {
+        this.lista_de_gimnasios = lista_de_gimnasios;
+    }
     
 
     public HashMap<String, Usuario> getLista_De_Usuarios() {
         return lista_De_Usuarios;
     }
+    public cliente buscarCliente(String user){
+        for (cliente i: this.getLista_de_clientes()){
+            if(i.getUsername()==user){
+                return i;
+            }
+        }
+        return null;
+    };
+    
+    public Entrenadores buscarEntrenador(String user){
+        for (Entrenadores i: this.getLista_de_entrenadores()){
+            if(i.getUsername()==user){
+                return i;
+            }
+        }
+        return null;
+    };
+    public Gymnasio buscarGimnasio(String user){
+        for (Gymnasio i: this.getLista_de_gimnasios()){
+            if(i.getUsername()==user){
+                return i;
+            }
+        }
+        return null;
+    };
 
     public void setLista_De_Usuarios(HashMap<String, Usuario> lista_De_Usuarios) {
         this.lista_De_Usuarios = lista_De_Usuarios;
@@ -51,22 +100,22 @@ public class login {
             return "Usuario ya existente";
         }
     }
-    public String insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena){
-        cliente nuevoCliente = new cliente(gimnasio,nombre,apellido, numero_Telefono, fechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, nombre_Contacto_emergencia, numero_telefono_emergencia, username, contrasena);
+    public String insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono,long numero_cedula, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena){
+        cliente nuevoCliente = new cliente("Cliente",gimnasio,nombre,apellido, numero_Telefono,numero_cedula, fechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, nombre_Contacto_emergencia, numero_telefono_emergencia, username, contrasena);
         if (!this.existe_el_usuario(username, contrasena)){
             this.lista_de_clientes.add(nuevoCliente);
         }
         return this.insertarUsuario(username, contrasena);
     }
-    public String insertarEntrenador(String nombre, String descripcion, String username, String contrasena, Icon imagen){
-        Entrenadores nuevoEntrenador = new Entrenadores(nombre,descripcion,username, contrasena, imagen);
+    public String insertarEntrenador(String apellido,String nombre, String username, String contrasena){
+        Entrenadores nuevoEntrenador = new Entrenadores(apellido,nombre,username, contrasena);
         if (!this.existe_el_usuario(username, contrasena))
             this.lista_de_entrenadores.add(nuevoEntrenador);
         return this.insertarUsuario(username, contrasena);
     }
     
-    public String insertarGimnasio(String Nombre_del_Gimnasio, String Direccion, String username, String contrasena, Icon imagen){
-        Gymnasio nuevoGimnasio = new Gymnasio(Nombre_del_Gimnasio,Direccion, username, contrasena, imagen);
+    public String insertarGimnasio(String Nombre_del_Gimnasio, String Direccion, String username, String contrasena){
+        Gymnasio nuevoGimnasio = new Gymnasio("Gimnasio",Nombre_del_Gimnasio,Direccion, username, contrasena);
         if (!this.existe_el_usuario(username, contrasena))
             this.lista_de_gimnasios.add(nuevoGimnasio);
         return this.insertarUsuario(username, contrasena);
