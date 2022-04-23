@@ -55,7 +55,6 @@ public class Registro_Usuario extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,11 +132,9 @@ public class Registro_Usuario extends javax.swing.JFrame {
 
         jLabel7.setText("Tipo de usuario:");
 
-        jTextField15.setText("Nombre Gimancio");
+        jTextField15.setText("Nombre Gimansio");
 
         jTextField16.setText("Edad");
-
-        jTextField17.setText("Nombre del gimnasio");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,9 +214,7 @@ public class Registro_Usuario extends javax.swing.JFrame {
                                             .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                                            .addComponent(jTextField17))))
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(3, 3, 3)))
                         .addGap(48, 48, 48))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -261,9 +256,7 @@ public class Registro_Usuario extends javax.swing.JFrame {
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
@@ -300,24 +293,37 @@ public class Registro_Usuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
+        
         ControladorLogin login = new ControladorLogin();
         int tipo=jComboBox2.getSelectedIndex();
         String tipoS;
-        if (tipo==1){
-            tipoS = "Cliente";
-        }else if(tipo==2){
-            tipoS = "Entrenador";
+        String nombre = jTextField1.getText();String apellido = jTextField2.getText();long cedula = Long.parseLong(jTextField3.getText());Long telefono = Long.parseLong(jTextField4.getText());
+        String Nacimiento = jTextField5.getText(); String direccion = jTextField6.getText();String ocupacion = jTextField8.getText(); String EPS = jTextField9.getText();String genero = (String) jComboBox1.getSelectedItem();
+        Double peso = Double.parseDouble(jTextField10.getText()); Double altura = Double.parseDouble(jTextField11.getText()); String NombreE = jTextField7.getText();Long TelefonoE = Long.parseLong(jTextField12.getText());
+        String user = jTextField13.getText();String contrasena = jTextField14.getText();String gimnasio=jTextField15.getText();int edad = Integer.parseInt(jTextField16.getText());
+        
+        if(login.existe_el_Usuario(user, contrasena)){
+            jTextField13.setText("Este nombre de usuario ya existe");
         }else{
-            tipoS = "Gimnasio";
-        }
-        int x;
-        x = login.registrarUsuario(tipoS,jTextField1.getText() , jTextField2.getText(),Long.parseLong(jTextField3.getText()),Long.parseLong(jTextField4.getText()), jTextField5.getText(), jTextField6.getText(), jTextField8.getText(), jTextField9.getText(), (String) jComboBox1.getSelectedItem(), Double.parseDouble(jTextField10.getText()), Double.parseDouble(jTextField11.getText()), jTextField7.getText(),Long.parseLong(jTextField12.getText()), jTextField13.getText(), jTextField14.getText(), Integer.parseInt(jTextField16.getText()), jTextField17.getText());
-        if (x==0) {
-            jTextField13.setText("Este usuario ya tiene una cuenta");
-        }else{
-            Registro_Correcto RUE= new Registro_Correcto();
-            RUE.setVisible(true);
-            this.dispose(); 
+            if (tipo==1){
+                tipoS = "Cliente";
+                login.getLogin().insertarCliente(gimnasio,nombre,apellido,telefono,cedula,Nacimiento,edad,direccion, ocupacion, EPS, peso, altura, NombreE, TelefonoE, user, contrasena);
+            }else if(tipo==2){
+                tipoS = "Entrenador";
+                login.getLogin().insertarEntrenador(apellido,nombre, user, contrasena);
+            }else{
+                tipoS = "Gimnasio";
+                login.getLogin().insertarGimnasio(gimnasio, direccion, user, contrasena);
+            }
+            int x;
+            x = login.registrarUsuario(tipoS, nombre, apellido, cedula, telefono, Nacimiento, direccion, ocupacion, EPS, genero, peso, altura, NombreE, TelefonoE, user, contrasena, edad, gimnasio);
+            if (x==0) {
+                jTextField13.setText("Este usuario ya tiene una cuenta");
+            }else{
+                Registro_Correcto RUE= new Registro_Correcto();
+                RUE.setVisible(true);
+                this.dispose(); 
+            }
         }
         
 // TODO add your handling code here:
@@ -383,7 +389,6 @@ public class Registro_Usuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
