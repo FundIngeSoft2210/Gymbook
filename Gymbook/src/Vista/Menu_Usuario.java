@@ -4,6 +4,11 @@
  */
 package proyecto_01.Vista;
 
+import Controladores.ControladorLogin;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author MAIKOL
@@ -16,6 +21,8 @@ public class Menu_Usuario extends javax.swing.JFrame {
     public Menu_Usuario() {
         initComponents();
     }
+    
+    public String usernameActual;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,6 +105,7 @@ public class Menu_Usuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     Perfil_Usuario PU= new Perfil_Usuario();
+    PU.usernameActual = usernameActual;
     PU.setVisible(true);
     this.dispose();
     
@@ -105,6 +113,14 @@ public class Menu_Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    
+       
+    ControladorLogin sesion = new ControladorLogin();
+        try {
+            sesion.getLogin().guardarTodo();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu_Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     Login inicio= new Login();
     inicio.setVisible(true);
     this.dispose();    
