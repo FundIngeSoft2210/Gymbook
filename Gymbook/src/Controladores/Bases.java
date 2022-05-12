@@ -9,23 +9,65 @@ package Controladores;
  * @author MAIKOL
  */
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.util.Scanner;
 import java.io.BufferedReader; 
 import java.io.FileNotFoundException; 
+import java.io.FileOutputStream;
 import java.io.FileReader; 
 import java.io.IOException; 
+import java.util.Date;
+import javax.swing.JOptionPane;
 import login.Clases.Metas;
 import login.Clases.Resultados;
 import login.Clases.Usuario;
 
 public class Bases {
     
-    private String archivoUsuarios;
-    private String archivoMetas;
-    private String archivoResultados;
+    private String archivoUsuarios="archivoUsuarios.txt";
+    private String archivoMetas="archivoMetas.txt";
+    private String archivoResultados="archivoResultados.txt";
 
-    void muestraContenido(String archivo) throws FileNotFoundException, IOException { 
+    public void escribirUsuario(String usuario, String contrasena, String tipousuario, String nombreGimnacio, String nombreusuario, String apellidousuario, String numerodocumento, String numerotelefono, Date fechanacimiento, String Direccionvivienda, String ocupacion, String eps, int edad, String genero, int peso, int altura, String nombreemergencia, String telefonoemergencia) {
+        try {
+        File file = new File (archivoUsuarios);
+        FileOutputStream output = new FileOutputStream(file, true);
+        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+        String registroDatos = usuario + ',' + contrasena + ',' + nombreGimnacio +',' + nombreusuario +',' + apellidousuario + ',' + numerodocumento + ',' + numerotelefono + ',' + fechanacimiento +',' + Direccionvivienda + ',' + ocupacion + ',' + eps + ',' + edad + ',' + genero + ',' + peso + ',' + altura + ',' + nombreemergencia + ',' + telefonoemergencia + '\n';
+        Escritor.write(registroDatos.getBytes());
+        Escritor.flush();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
+        System.exit(0);
+    }
+        
+    /**
+     *
+     * @param idMeta
+     * @param nombremeta
+     * @param fechaFin
+     * @param areaGanancia
+     * @param PuntosGanancia
+     * @param estadometa
+     * @param tipometa
+     */
+    public void escribirMetas(String idMeta, String nombremeta, Date fechaFin , String areaGanancia, int PuntosGanancia, String estadometa, String tipometa){
+        try {
+        File file = new File (archivoMetas);
+        FileOutputStream output = new FileOutputStream(file, true);
+        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+        String registroDatos = idMeta + ',' + nombremeta + fechaFin +',' + areaGanancia + ',' + PuntosGanancia + ',' + estadometa + ',' + tipometa + '\n';
+        Escritor.write(registroDatos.getBytes());
+        Escritor.flush();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
+        System.exit(0);
+    }
+
+}
+    
+    public void muestraContenido(String archivo) throws FileNotFoundException, IOException { 
 	String cadena; 
 	FileReader f = new FileReader(archivo); 
 	BufferedReader b = new BufferedReader(f); 
