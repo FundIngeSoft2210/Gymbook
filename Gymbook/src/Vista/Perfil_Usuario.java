@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_01.Vista;
+package Vista;
 
 import Controladores.ControladorLogin;
 import java.util.List;
@@ -199,7 +199,7 @@ public class Perfil_Usuario extends javax.swing.JFrame {
 
         jLabel14.setText("Foto Perfil");
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Perfil Usuario.jpg"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Perfil Usuario.jpg"))); // NOI18N
         jLabel15.setText("Foto");
 
         jLabel16.setText("Numero Documento:");

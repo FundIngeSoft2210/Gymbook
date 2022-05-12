@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_01.Vista;
+package Vista;
 
 /**
  *
@@ -121,7 +121,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Sara.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Sara.jpg"))); // NOI18N
 
         jLabel7.setText("Sara");
 
@@ -175,7 +175,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton3))))
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Manuel.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Manuel.jpg"))); // NOI18N
 
         jLabel11.setText("Manuel");
 
@@ -252,7 +252,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Asistencia Grupal.jpg"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Asistencia Grupal.jpg"))); // NOI18N
 
         jLabel18.setText("Asistencia Completa Equipo");
 
@@ -300,7 +300,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton5))))
         );
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr 02.jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Correr 02.jpg"))); // NOI18N
 
         jLabel22.setText("Carrera en equipo 5 KM");
 
@@ -415,7 +415,7 @@ public class Equipo_Usuario extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(105, 105, 105)
                                 .addComponent(jLabel16)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jButton1)

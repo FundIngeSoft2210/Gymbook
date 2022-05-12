@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_01.Vista;
+package Vista;
 
 /**
  *
@@ -112,7 +112,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
 
         jLabel3.setText("Desarrollo Personal");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Perfil Usuario.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Perfil Usuario.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
 
         jButton1.setText("Buscar");
@@ -125,7 +125,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Correr.jpg"))); // NOI18N
 
         jLabel7.setText("Carrera 10 KM");
 
@@ -181,7 +181,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton3))))
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Flexiones pecho.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Flexiones pecho.jpg"))); // NOI18N
 
         jLabel11.setText("Flexiones pecho 50 en 1:30 minutos");
 
@@ -270,7 +270,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Adelgazar.jpg"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Adelgazar.jpg"))); // NOI18N
 
         jLabel18.setText("Adelgazar 3 kilos en marzo");
 
@@ -318,7 +318,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton5))))
         );
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_01/Vista/Imagenes/Correr.jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Correr 02.jpg"))); // NOI18N
 
         jLabel22.setText("Carrera 5 KM");
 
@@ -439,7 +439,7 @@ public class Metas_Objetivo_Usuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
