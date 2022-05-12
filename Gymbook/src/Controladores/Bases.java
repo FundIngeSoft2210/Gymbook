@@ -40,19 +40,10 @@ public class Bases {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
         System.exit(0);
+        }
     }
-        
-    /**
-     *
-     * @param idMeta
-     * @param nombremeta
-     * @param fechaFin
-     * @param areaGanancia
-     * @param PuntosGanancia
-     * @param estadometa
-     * @param tipometa
-     */
-    public void escribirMetas(String idMeta, String nombremeta, Date fechaFin , String areaGanancia, int PuntosGanancia, String estadometa, String tipometa){
+
+    public void escribirMetas(String idMeta, String nombremeta, Date fechaFin , String areaGanancia,int PuntosGanancia,String estadometa, String tipometa){
         try {
         File file = new File (archivoMetas);
         FileOutputStream output = new FileOutputStream(file, true);
@@ -63,9 +54,22 @@ public class Bases {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
         System.exit(0);
+        }
+    }
+        public void escribirResultados(String numeroCedulaCliente, String habilidad,int total){
+        try {
+        File file = new File (archivoResultados);
+        FileOutputStream output = new FileOutputStream(file, true);
+        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+        String registroDatos = numeroCedulaCliente + ',' + habilidad +','+ total +'\n';
+        Escritor.write(registroDatos.getBytes());
+        Escritor.flush();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
+        System.exit(0);
     }
 
-}
+    }
     
     public void muestraContenido(String archivo) throws FileNotFoundException, IOException { 
 	String cadena; 
