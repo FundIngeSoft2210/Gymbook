@@ -18,6 +18,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader; 
 import java.io.IOException; 
 import java.util.Date;
+import java.util.List;
 import javax.swing.JOptionPane;
 import login.Clases.Metas;
 import login.Clases.Resultados;
@@ -89,32 +90,32 @@ public class Bases {
         } 
         b.close(); 
     } 
-    public Usuario[] archivosArrayUsuario(String lecturaArchivo) {
-    var array = lecturaArchivo.split("\n");
-    var array2 = [];
+    public List<String> archivosArrayUsuario(String lecturaArchivo) {
+    String[] array = lecturaArchivo.split("\n");
+    List<String> array2 = null;
     for (var i = 0; i < array.length; i++) {
-        var array3 = array[i].split(",");
-        array2.push(array3);
+        String[] array3 = array[i].split(",");
+        array2.add(array3.toString());
     }
     return array2;
     }
     
-    public Resultados [] archivosArrayResultados(String lecturaArchivo) {
-    var array = lecturaArchivo.split("\n");
-    var array2 = [];
+    public List<String> archivosArrayResultados(String lecturaArchivo) {
+    String [] array = lecturaArchivo.split("\n");
+    List<String> array2 = null;
     for (var i = 0; i < array.length; i++) {
         var array3 = array[i].split(",");
-        array2.push(array3);
+        array2.add(array3.toString());
     }
     return array2;
     }
     
-    public Metas[] archivosArrayMetas(String lecturaArchivo) {
-    var array = lecturaArchivo.split("\n");
-    var array2 = [];
+    public List<String> archivosArrayMetas(String lecturaArchivo) {
+    String [] array = lecturaArchivo.split("\n");
+    List<String> array2 = null;
     for (var i = 0; i < array.length; i++) {
         var array3 = array[i].split(",");
-        array2.push(array3);
+        array2.add(array3.toString());
     }
     return array2;
     }
