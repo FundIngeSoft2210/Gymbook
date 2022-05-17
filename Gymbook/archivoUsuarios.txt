@@ -1,0 +1,1 @@
+Nombre ,Contraseña,Nombre Gimansio,Nombre Contacto Emergencia,Apellido,Fecha Nacimiento,Nombre Contacto Emergencia,Fecha Nacimiento,Direccion Vivienda,Ocupacion,EPS,22,Masculino,0,128,Nombre Contacto Emergencia,Contraseña
