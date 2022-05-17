@@ -206,7 +206,7 @@ public class Perfil_Usuario extends javax.swing.JFrame {
 
         jTextField14.setText("1016083370");
 
-        jLabel17.setText("Gimacio: musculos");
+        jLabel17.setText("Gimasio: musculos");
 
         jLabel18.setText("Genero: Femenino");
 
