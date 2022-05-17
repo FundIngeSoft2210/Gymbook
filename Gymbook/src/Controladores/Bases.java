@@ -30,7 +30,7 @@ public class Bases {
     private String archivoMetas="archivoMetas.txt";
     private String archivoResultados="archivoResultados.txt";
 
-    public void escribirUsuario(String usuario, String contrasena, String tipousuario, String nombreGimnacio, String nombreusuario, String apellidousuario, String numerodocumento, String numerotelefono, Date fechanacimiento, String Direccionvivienda, String ocupacion, String eps, int edad, String genero, int peso, int altura, String nombreemergencia, String telefonoemergencia) {
+    public void escribirUsuario(String usuario, String contrasena, String tipousuario, String nombreGimnacio, String nombreusuario, String apellidousuario, String numerodocumento, String numerotelefono, String fechanacimiento, String Direccionvivienda, String ocupacion, String eps, int edad, String genero, int peso, int altura, String nombreemergencia, String telefonoemergencia) {
         try {
         File file = new File (archivoUsuarios);
         FileOutputStream output = new FileOutputStream(file, true);
