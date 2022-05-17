@@ -92,19 +92,19 @@ public class login {
     }
     public String insertarUsuario(String username,String contrasena){
         Usuario nuevoUsuario = new Usuario(username,contrasena);
-        if (!this.existe_el_usuario(username, contrasena)){
+        //if (!this.existe_el_usuario(username, contrasena)){
             this.lista_De_Usuarios.put(username,nuevoUsuario);
             return "Usuario Insertado correctamente";
-        }
-        else {
-            return "Usuario ya existente";
-        }
+        //}
+        //else {
+        //    return "Usuario ya existente";
+        //}
     }
     public String insertarCliente(String gimnasio, String nombre, String apellido, long numero_Telefono,long numero_cedula, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena){
         cliente nuevoCliente = new cliente("Cliente",gimnasio,nombre,apellido, numero_Telefono,numero_cedula, fechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, nombre_Contacto_emergencia, numero_telefono_emergencia, username, contrasena);
-        if (!this.existe_el_usuario(username, contrasena)){
+        //if (!this.existe_el_usuario(username, contrasena)){
             this.lista_de_clientes.add(nuevoCliente);
-        }
+        //}
         return this.insertarUsuario(username, contrasena);
     }
     public String insertarEntrenador(String apellido,String nombre, String username, String contrasena){
