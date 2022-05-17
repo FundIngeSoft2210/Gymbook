@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import Controladores.Bases;
 import Controladores.ControladorLogin;
 
 /**
@@ -295,6 +296,7 @@ public class Registro_Usuario extends javax.swing.JFrame {
     
         
         ControladorLogin login = new ControladorLogin();
+        Bases Base = new Bases();
         int tipo=jComboBox2.getSelectedIndex();
         String tipoS;
         String nombre = jTextField1.getText();String apellido = jTextField2.getText();long cedula = Long.parseLong(jTextField3.getText());Long telefono = Long.parseLong(jTextField4.getText());
@@ -308,12 +310,17 @@ public class Registro_Usuario extends javax.swing.JFrame {
             if (tipo==1){
                 tipoS = "Cliente";
                 login.getLogin().insertarCliente(gimnasio,nombre,apellido,telefono,cedula,Nacimiento,edad,direccion, ocupacion, EPS, peso, altura, NombreE, TelefonoE, user, contrasena);
+                Base.escribirUsuario(nombre, contrasena, "Cliente", gimnasio, NombreE, apellido, Nacimiento, NombreE, Nacimiento, direccion, ocupacion, EPS, edad, genero, tipo, ABORT, NombreE, contrasena);
             }else if(tipo==2){
                 tipoS = "Entrenador";
                 login.getLogin().insertarEntrenador(apellido,nombre, user, contrasena);
             }else{
-                tipoS = "Gimnasio";
-                login.getLogin().insertarGimnasio(gimnasio, direccion, user, contrasena);
+                //tipoS = "Gimnasio";
+                tipoS= "Cliente";
+                //login.getLogin().insertarGimnasio(gimnasio, direccion, user, contrasena);
+                login.getLogin().insertarCliente(gimnasio,nombre,apellido,telefono,cedula,Nacimiento,edad,direccion, ocupacion, EPS, peso, altura, NombreE, TelefonoE, user, contrasena);
+                Base.escribirUsuario(nombre, contrasena, "Cliente", gimnasio, NombreE, apellido, Nacimiento, NombreE, Nacimiento, direccion, ocupacion, EPS, edad, genero, tipo, ABORT, NombreE, contrasena);
+
             }
             int x;
             x = login.registrarUsuario(tipoS, nombre, apellido, cedula, telefono, Nacimiento, direccion, ocupacion, EPS, genero, peso, altura, NombreE, TelefonoE, user, contrasena, edad, gimnasio);
