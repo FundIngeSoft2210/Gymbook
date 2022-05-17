@@ -407,7 +407,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Gimacio: musculos"/>
+        <Property name="text" type="java.lang.String" value="Gimasio: musculos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">
