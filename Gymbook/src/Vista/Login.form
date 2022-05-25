@@ -51,7 +51,7 @@
                       <Component id="jButton3" min="-2" pref="131" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="161" max="32767" attributes="0"/>
+              <EmptySpace pref="108" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

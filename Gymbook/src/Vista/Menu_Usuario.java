@@ -38,9 +38,9 @@ public class Menu_Usuario extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,7 +51,7 @@ public class Menu_Usuario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 170, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 310, -1));
 
         jButton2.setText("Metas y Objetivos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class Menu_Usuario extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 340, 170, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 310, -1));
 
         jButton3.setText("Mi Equipo");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -67,10 +67,10 @@ public class Menu_Usuario extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 170, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 310, -1));
 
-        jButton4.setText("Calendario de Clases");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 170, -1));
+        jButton4.setText("Clases Disponibles");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, 310, -1));
 
         jButton5.setText("Lista Entrenadores");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -78,15 +78,7 @@ public class Menu_Usuario extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 490, 170, -1));
-
-        jButton6.setText("Foro Social");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 540, 170, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 310, -1));
 
         jButton7.setText("Salir");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -94,11 +86,15 @@ public class Menu_Usuario extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 590, 170, -1));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 640, 310, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Proyecto asdasdas.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 440, 260));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 440, 260));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("Menu Usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,10 +124,6 @@ public class Menu_Usuario extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     Metas_Objetivo_Usuario MOU= new Metas_Objetivo_Usuario();
     MOU.setVisible(true);
@@ -148,7 +140,7 @@ public class Menu_Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    Lista_Entrenadores LE= new Lista_Entrenadores();
+    Lista_Entrenadores_Usuarios LE= new Lista_Entrenadores_Usuarios();
     LE.setVisible(true);
     this.dispose();
         // TODO add your handling code here:
@@ -195,8 +187,8 @@ public class Menu_Usuario extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
