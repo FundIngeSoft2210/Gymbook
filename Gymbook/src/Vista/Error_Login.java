@@ -67,7 +67,7 @@ public class Error_Login extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(68, 68, 68)
                 .addComponent(jButton1)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
