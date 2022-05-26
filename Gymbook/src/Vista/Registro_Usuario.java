@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -326,7 +326,7 @@ public class Registro_Usuario extends javax.swing.JFrame {
                 Base.escribirUsuario(nombre, contrasena, "Cliente", gimnasio, NombreE, apellido, Nacimiento, NombreE, Nacimiento, direccion, ocupacion, EPS, edad, genero, tipo, ABORT, NombreE, contrasena);
             }else if(tipo==2){
                 tipoS = "Entrenador";
-                login.getLogin().insertarEntrenador(apellido,nombre, user, contrasena,areasTrabajo);
+                login.getLogin().insertarEntrenador(apellido,nombre, user, contrasena);
             }else{
                 //tipoS = "Gimnasio";
                 tipoS= "Cliente";

@@ -49,7 +49,7 @@ public class Lista_Entrenadores_Usuarios extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Area Entrenador", "Lider de Equipos", "Ver Peril"
+                "Nombre", "Clase", "Lider de Equipos", "Ver Peril"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
