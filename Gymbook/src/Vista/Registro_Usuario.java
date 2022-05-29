@@ -126,6 +126,11 @@ public class Registro_Usuario extends javax.swing.JFrame {
         });
 
         jButton2.setText("Atras");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTextField13.setText("Usuario");
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +312,6 @@ public class Registro_Usuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
-        
         ControladorLogin login = new ControladorLogin();
         Bases Base = new Bases();
         int tipo=jComboBox2.getSelectedIndex();
@@ -335,8 +339,8 @@ public class Registro_Usuario extends javax.swing.JFrame {
                 Base.escribirUsuario(nombre, contrasena, "Cliente", gimnasio, NombreE, apellido, Nacimiento, NombreE, Nacimiento, direccion, ocupacion, EPS, edad, genero, tipo, ABORT, NombreE, contrasena);
 
             }
-            int x;
-            x = login.registrarUsuario(tipoS, nombre, apellido, cedula, telefono, Nacimiento, direccion, ocupacion, EPS, genero, peso, altura, NombreE, TelefonoE, user, contrasena, edad, gimnasio);
+                int x;
+                x = login.registrarUsuario(tipoS, nombre, apellido, cedula, telefono, Nacimiento, direccion, ocupacion, EPS, genero, peso, altura, NombreE, TelefonoE, user, contrasena, edad, gimnasio);
             if (x==0) {
                 jTextField13.setText("Este usuario ya tiene una cuenta");
             }else{
@@ -355,6 +359,14 @@ public class Registro_Usuario extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //aca
+    Login LO= new Login();
+    LO.setVisible(true);
+    this.dispose(); 
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

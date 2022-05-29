@@ -8,6 +8,7 @@ import Controladores.ControladorLogin;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import login.login;
 
 /**
@@ -129,9 +130,9 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-    Registro_Usuario RU= new Registro_Usuario();
-    RU.setVisible(true);
-    this.dispose();  
+        Registro_Usuario RU= new Registro_Usuario();
+        RU.setVisible(true);
+        this.dispose();  
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2MouseClicked
@@ -145,13 +146,11 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
      
-    
     ControladorLogin Login = new ControladorLogin();
     
     if (Login.existe_el_Usuario(jTextField1.getText(), jPasswordField1.getPassword().toString())){
-        Error_Login MU= new Error_Login();
-        MU.setVisible(true);
-        this.dispose();
+        
+        JOptionPane.showMessageDialog(null,"El Usuario Existe");
     }
     if(Login.verificar_User_contrasena(jTextField1.getText(), jPasswordField1.getPassword().toString())){
         Menu_Usuario MU= new Menu_Usuario();
@@ -159,9 +158,8 @@ public class Login extends javax.swing.JFrame {
         MU.setVisible(true);
         this.dispose(); 
     }else{
-        Error_Login_02 MU= new Error_Login_02();
-        MU.setVisible(true);
-        this.dispose(); 
+        
+        JOptionPane.showMessageDialog(null,"Usuario No Existe");
     }
     
         // TODO add your handling code here:
