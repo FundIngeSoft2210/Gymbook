@@ -28,16 +28,16 @@ public class Bases {
     
     private String archivoUsuarios="archivoUsuarios.txt";
     private String archivoMetas="archivoMetas.txt";
-        private String archivoResultados="archivoResultados.txt";
+    private String archivoResultados="archivoResultados.txt";
 
     public void escribirUsuario(String usuario, String contrasena, String tipousuario, String nombreGimnacio, String nombreusuario, String apellidousuario, String numerodocumento, String numerotelefono, String fechanacimiento, String Direccionvivienda, String ocupacion, String eps, int edad, String genero, int peso, int altura, String nombreemergencia, String telefonoemergencia) {
         try {
-        File file = new File (archivoUsuarios);
-        FileOutputStream output = new FileOutputStream(file, true);
-        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
-        String registroDatos = usuario + ',' + contrasena + ',' + nombreGimnacio +',' + nombreusuario +',' + apellidousuario + ',' + numerodocumento + ',' + numerotelefono + ',' + fechanacimiento +',' + Direccionvivienda + ',' + ocupacion + ',' + eps + ',' + edad + ',' + genero + ',' + peso + ',' + altura + ',' + nombreemergencia + ',' + telefonoemergencia + '\n';
-        Escritor.write(registroDatos.getBytes());
-        Escritor.flush();
+            File file = new File (archivoUsuarios);
+            FileOutputStream output = new FileOutputStream(file, true);
+            BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+            String registroDatos = usuario + ',' + contrasena + ',' + nombreGimnacio +',' + nombreusuario +',' + apellidousuario + ',' + numerodocumento + ',' + numerotelefono + ',' + fechanacimiento +',' + Direccionvivienda + ',' + ocupacion + ',' + eps + ',' + edad + ',' + genero + ',' + peso + ',' + altura + ',' + nombreemergencia + ',' + telefonoemergencia + '\n';
+            Escritor.write(registroDatos.getBytes());
+            Escritor.flush();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
         System.exit(0);
@@ -46,25 +46,25 @@ public class Bases {
 
     public void escribirMetas(String idMeta, String nombremeta, Date fechaFin , String areaGanancia,int PuntosGanancia,String estadometa, String tipometa){
         try {
-        File file = new File (archivoMetas);
-        FileOutputStream output = new FileOutputStream(file, true);
-        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
-        String registroDatos = idMeta + ',' + nombremeta + fechaFin +',' + areaGanancia + ',' + PuntosGanancia + ',' + estadometa + ',' + tipometa + '\n';
-        Escritor.write(registroDatos.getBytes());
-        Escritor.flush();
+            File file = new File (archivoMetas);
+            FileOutputStream output = new FileOutputStream(file, true);
+            BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+            String registroDatos = idMeta + ',' + nombremeta + fechaFin +',' + areaGanancia + ',' + PuntosGanancia + ',' + estadometa + ',' + tipometa + '\n';
+            Escritor.write(registroDatos.getBytes());
+            Escritor.flush();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
-        System.exit(0);
+            System.exit(0);
         }
     }
         public void escribirResultados(String numeroCedulaCliente, String habilidad,int total){
         try {
-        File file = new File (archivoResultados);
-        FileOutputStream output = new FileOutputStream(file, true);
-        BufferedOutputStream Escritor = new  BufferedOutputStream(output);
-        String registroDatos = numeroCedulaCliente + ',' + habilidad +','+ total +'\n';
-        Escritor.write(registroDatos.getBytes());
-        Escritor.flush();
+            File file = new File (archivoResultados);
+            FileOutputStream output = new FileOutputStream(file, true);
+            BufferedOutputStream Escritor = new  BufferedOutputStream(output);
+            String registroDatos = numeroCedulaCliente + ',' + habilidad +','+ total +'\n';
+            Escritor.write(registroDatos.getBytes());
+            Escritor.flush();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Se genero un problema en la simulacion. \n \nCerrando aplicacion.");
         System.exit(0);
