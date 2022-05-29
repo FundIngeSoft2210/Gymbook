@@ -19,7 +19,6 @@ public class ControladorLogin {
     private login login = new login();
     private Usuario actual = new Usuario();
     private String user;
-    private String areasTrabajo;
 
     public String getUser() {
         return user;
@@ -47,7 +46,7 @@ public class ControladorLogin {
             login.insertarCliente(gimnasio, nombre, apellido, NumeroTelefonico,NumeroDocumento, FechaNacimiento, edad, direccion, ocupacion, EPS, peso, altura, NombreContactoEmergencia, NumeroTelefonico, username, contrasena);
         }
         else if(TipodeUsuario=="Entrenador"){
-            login.insertarEntrenador(apellido,nombre, username, contrasena,areasTrabajo);
+            login.insertarEntrenador(apellido,nombre, username, contrasena);
         }else{
             login.insertarGimnasio(gimnasio, direccion, username, contrasena);
         }

@@ -28,7 +28,7 @@ public class Bases {
     
     private String archivoUsuarios="archivoUsuarios.txt";
     private String archivoMetas="archivoMetas.txt";
-    private String archivoResultados="archivoResultados.txt";
+        private String archivoResultados="archivoResultados.txt";
 
     public void escribirUsuario(String usuario, String contrasena, String tipousuario, String nombreGimnacio, String nombreusuario, String apellidousuario, String numerodocumento, String numerotelefono, String fechanacimiento, String Direccionvivienda, String ocupacion, String eps, int edad, String genero, int peso, int altura, String nombreemergencia, String telefonoemergencia) {
         try {
