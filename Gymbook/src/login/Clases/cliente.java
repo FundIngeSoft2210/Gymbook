@@ -5,7 +5,6 @@
  */
 package login.Clases;
 
-import java.util.Date;
 import javax.swing.Icon;
 
 /**
@@ -32,7 +31,7 @@ public class cliente extends Usuario{
     private String nombre_Contacto_emergencia;
     private long numero_telefono_emergencia;
 
-    public cliente(String gimnasio, String nombre, String apellido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen) {
+    public cliente(String gimnasio, String nombre, String apellido, long numero_Telefono, String fechaNacimiento, int edad, String direccion, String ocupacion, String EPS, double peso, double altura, String nombre_Contacto_emergencia, long numero_telefono_emergencia, String username, String contrasena, Icon imagen,String areasTrabajo) {
         super(username, contrasena, imagen);
         this.gimnasio = gimnasio;
         this.nombre = nombre;

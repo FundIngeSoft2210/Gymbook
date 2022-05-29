@@ -16,10 +16,22 @@ import javax.swing.Icon;
  */
 public class Entrenadores extends Usuario{
 
-    public Entrenadores(String apellido,String nombre, String username, String contrasena) {
+    
+    private List<cliente> Entrenados = new ArrayList<>();
+    private String nombre;
+    private String apellido;
+    private String descripcion; 
+    
+   
+    public Entrenadores(String nombre,String apellido,String descripcion, String username, String contrasena) {
         super(username, contrasena);
         this.nombre = nombre;
         this.apellido=apellido;
+        this.descripcion=descripcion;
+    }
+
+    public Entrenadores(String nombre, String apellido, String username, String contrasena) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getApellido() {
@@ -40,10 +52,7 @@ public class Entrenadores extends Usuario{
         this.descripcion = descripcion;
     }
     
-    private List<cliente> Entrenados = new ArrayList<>();
-    private String nombre;
-    private String descripcion; 
-    private String apellido;
+
 
     public Entrenadores() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -15,6 +15,12 @@ import javax.swing.Icon;
  */
 public class Gymnasio extends login.Clases.Usuario{
 
+   
+    private List<Entrenadores> lista_Entrenadores=new ArrayList <>();
+    private List<cliente> lista_Clientes = new ArrayList<>();   
+    private String Nombre_del_Gimnasio;
+    private String Direccion;
+    
     public Gymnasio(String username, String contrasena) {
         super(username, contrasena);
     }
@@ -32,10 +38,6 @@ public class Gymnasio extends login.Clases.Usuario{
         this.Direccion=direccion;
     }
         
-    private List<Entrenadores> lista_Entrenadores=new ArrayList <>();
-    private List<cliente> lista_Clientes = new ArrayList<>();   
-    private String Nombre_del_Gimnasio;
-    private String Direccion;
 
     public Gymnasio() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
